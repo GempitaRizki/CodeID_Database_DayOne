@@ -223,8 +223,7 @@ ADD COLUMN proj_customer varchar(100);
 INSERT INTO projects(proj_id,proj_name,proj_createdon,proj_duedate,proj_customer,proj_description,proj_status) 
 			VALUES 	(1,'E-COMMERCE','2021-09-14','2021-12-13','TELKOMSEL',NULL,'INPROGRESS'),
 					(2,'TRAVELOKA','2021-09-14','2021-12-13','XL',NULL,'INPROGRESS'),
-					(3,'TIKET.COM','2021-09-14','2021-12-13','INDOSAT',NULL,'INPROGRESS')
-			;
+					(3,'TIKET.COM','2021-09-14','2021-12-13','INDOSAT',NULL,'INPROGRESS');
 
 
 ALTER TABLE projects 
@@ -242,11 +241,14 @@ INSERT INTO project_assignment(pras_proj_id,pras_employee_id,pras_startdate,pras
 					(1,'106','2021-09-14',null,'INPROGRESS'),
 					(2,'104','2021-09-14',null,'ASSIGNED'),
 					(2,'105','2021-09-14','2021-09-17','COMPLETED'),
-					(2,'106','2021-09-14','2021-09-17','INPROGRESS')					
-					;
+					(2,'106','2021-09-14','2021-09-17','INPROGRESS');
                     
 //soal nomor 6
 SELECT employees.* FROM employees JOIN project_assignment ON employees.employee_id = project_assignment.pras_employee_id WHERE project_assignment.pras_status = 'COMPLETED';
 
-
+/*
+Hints : 
+Select now() 
+Select now() + interval ’30 day’ 
+constraint primary key (attribute1,attribute2)*/
 
